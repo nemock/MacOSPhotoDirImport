@@ -14,6 +14,9 @@ def import_photos(directory):
             # Build the full path of the image file
             file_path = os.path.join(directory, file)
             
+            # Print the name of the picture being imported
+            print(f"Importing: {file}")
+            
             # Use the 'osascript' command to run an AppleScript
             script = f'tell application "Photos" to import POSIX file "{file_path}"'
             subprocess.run(['osascript', '-e', script])
