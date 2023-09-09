@@ -18,7 +18,7 @@ def import_photos(directory):
             print(f"Importing: {file}")
             
             # Use the 'osascript' command to run an AppleScript
-            script = f'tell application "Photos" to import POSIX file "{file_path}"'
+            script = f'tell application "Photos" to import POSIX file "{file_path}" with skip check duplicates'
             subprocess.run(['osascript', '-e', script])
             
     print("Photos imported successfully!")
