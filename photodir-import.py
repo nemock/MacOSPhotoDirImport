@@ -1,5 +1,6 @@
 import os
 import subprocess
+import sys
 
 SUPPORTED_EXTENSIONS = [".jpg", ".jpeg", ".png"]
 
@@ -19,6 +20,14 @@ def import_photos(directory):
             
     print("Photos imported successfully!")
 
-# Example usage
-chosen_directory = "/path/to/your/chosen/directory"
+# Check if the directory argument is provided
+if len(sys.argv) < 2:
+    print("Please provide the directory path as a command line argument.")
+    print("Usage: python import_photos.py /path/to/your/chosen/directory")
+    sys.exit(1)
+
+# Get the directory path from the command line argument
+chosen_directory = sys.argv[1]
+
+# Call the function with the provided directory path
 import_photos(chosen_directory)
