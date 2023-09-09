@@ -29,7 +29,7 @@ This Python script allows you to import new photos from a chosen directory into 
 2. Run the script by executing the following command:
 
    ```
-   python photodir-import.py
+   python photodir-import.py {pathname}
    ```
 
 3. You will be prompted to enter the path to the directory containing the new photos you want to import. Provide the full path and press Enter.
